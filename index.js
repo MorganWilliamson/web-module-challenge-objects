@@ -58,10 +58,12 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
-
+console.log(reviews[5]);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
-
+console.log(reviews)
+let newReview = {name: "Morgan", rating: 5, feedback: "Nice, sterile atmosphere. The chocolate milk is strikingly overpriced and at the same time very easy to steal"}
+reviews.push(newReview);
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
@@ -87,7 +89,7 @@ function getReviewByIndex(reviews, index) {
 getLastReview should accept:
   (1) an array of objects 
   
-and should return a string in the format `name} gave the restaurant a {rating}, and their feedback was: {feedback}`
+and should return a string in the format `{name} gave the restaurant a {rating}, and their feedback was: {feedback}`
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
