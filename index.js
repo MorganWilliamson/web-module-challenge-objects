@@ -9,10 +9,12 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 function createMenuItem(name, cost, category){
     return `name: ${name}, cost: ${cost}, category: ${category}`; 
 }
-// console.log(createMenuItem("Taco", 18, "Lunch"))
+// console.log(createMenuItem("Taco", 18, "Lunch"));
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
-
+createMenuItem("Taco", 10, "Lunch");
+createMenuItem("Pancake", 7, "Breakfast");
+createMenuItem("Steak", 25, "Dinner");
 
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
@@ -25,7 +27,23 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
+//customer, the (parameter), should allow us to invoke teacher, student, or public
+  //if someone is a teacher, discount by 25%
+    //if someone is a student, discount by 25%
+      //otherwise, discount by 10%
+        //return discounted price
 
+function discount(customer){
+  if (customer === "teacher"){
+    return `${burger.price}` * .75;
+  } else if (customer === "student"){
+    return `${burger.price}` *.75;
+  } else {
+    return `${burger.price}` *.90;
+  }
+}
+
+// console.log(discount("teacher"));
 
 ///////////////Reviews (MVP)///////////////////
 
